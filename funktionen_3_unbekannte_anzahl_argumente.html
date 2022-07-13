@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Titel</title>
+    <style></style>
+
+    <script>
+        'use strict';
+
+        // Der Rest-Parameter (markiert mit ...) nimmt alle Argumente an, die nicht in einen 
+        // eigenen Parameter geschrieben werden können
+        const createEl = (content, parent, ...klassen) => {
+            const newEl = document.createElement('div');
+            newEl.innerHTML = content;
+            console.log(klassen);
+            // Wenn length == 0, dann wird das als false interpretiert
+            if (klassen.length) newEl.className = klassen.join(' ');
+            parent.appendChild(newEl);
+        }
+
+        const init = () => {
+            createEl('Hallo', document.body, 'rot', 'breit');
+            createEl('Welt', document.body);
+        }
+
+        document.addEventListener("DOMContentLoaded", init);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Titel</title>
+    <style></style>
+
+    <script>
+        'use strict';
+
+        // Breite * Tiefe * Höhe, um das Volumen eines Raumes zu berechnen
+        // Parametern können default-Werte gegeben werden. Wird für den Parameter kein Argument übergeben, behält dieser den default-Wert
+        const volumen = (b = 1, t = 1, h = 1) => {
+            console.log(b, t, h);
+            return b * t * h;
+        }
+
+        console.log(volumen(5, 6, 2) + 'm³');
+        console.log(volumen(5, 6) + 'm³');
+        console.log(volumen(5) + 'm³');
+        console.log(volumen() + 'm³');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
