@@ -48,6 +48,7 @@ console.log(sum / myArray.length);
 //indexOf
 
 
+
 const myArray = [21, 54, 87, 98, 65, 32, 98];
 
 let erg = myArray.includes(98);
